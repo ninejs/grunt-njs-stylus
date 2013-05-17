@@ -1,24 +1,18 @@
 # Sample
 
 ```js
-var stylusFilesMap = [];
+var stylusFiles = [];
 .
 .
 .
-stylus : {
-			compile : {
-				options : {
-					paths : ['node_modules/nib/lib'],
-					urlfunc : 'embedurl', // use embedurl('test.png') in our code to trigger Data URI
-					// embedding
-					use : [require('fluidity') // use stylus plugin at compile time
-					],
-					import : [//  @import 'foo', 'bar/moo', etc. into every .styl file
+stylus:
+		{
+			files: stylusFiles,
+			options:
+			{
+				urlfunc: 'embedurl',
+				compress: true
 
-					],
-					compress : true
-				},
-				files : stylusFilesMap
 			}
 		}
 ```
