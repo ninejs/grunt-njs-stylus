@@ -1,5 +1,5 @@
 /*
- * nineplate grunt configuration file
+ * grunt configuration file
  */
 function exports(grunt) {
 	'use strict';
@@ -17,15 +17,11 @@ function exports(grunt) {
 			normal: {
 				options: {
 					reporter: 'spec',
-					globals: [/*'define', 'require'*/]
+					globals: []
 				}
 			}
 		},
 		watch: {
-			//			jshint : {
-			//				files : jsFiles,
-			//				tasks : 'jshint'
-			//			},
 			test: {
 				files: underscore.union(testFiles, jsFiles),
 				tasks: ['jshint', 'mochaTest']
